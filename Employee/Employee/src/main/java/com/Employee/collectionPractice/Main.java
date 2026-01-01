@@ -5,13 +5,21 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class MyThread extends Thread {
-   public void run() {
-      System.out.println("Thread is running");
-   }
+import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.stream.*;
 
-   public static void main(String[] args) {
-      MyThread t = new MyThread(); // create thread object
-      t.start();                  // start new thread
-   }
+public class Main{
+    public static void main(String[] args) throws Exception {
+        Callable <Integer> task = () -> {
+            return 10 + 123;
+        };
+        ExecutorService service = Executors.newSingleThreadExecutor();
+        Future <Integer> future = service.submit(task);
+        System.out.println(future.get());
+        service.shutdown();
+    }
 }
