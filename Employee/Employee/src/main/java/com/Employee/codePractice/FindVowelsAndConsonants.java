@@ -1,6 +1,6 @@
 package com.Employee.codePractice;
 
-public class Main {
+public class FindVowelsAndConsonants {
     public static void main(String[] args) {
         String str = "hello world"; // Input string
         str = str.toLowerCase();    // Convert to lowercase for easy check

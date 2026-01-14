@@ -11,13 +11,13 @@ public class FindFirstNonRepeatedCharacterUsingStream {
                 str.chars()                               // Convert string to IntStream
                         .mapToObj(c -> (char) c)               // Convert int to Character
                         .collect(
-                                LinkedHashMap::new,                // Maintain insertion order
-                                (map, ch) -> map.put(ch, map.getOrDefault(ch, 0) + 1),
+                                LinkedHashMap<Character, Integer>::new, // explicit types
+                                (map, ch) -> map.merge(ch, 1, Integer::sum),
                                 Map::putAll
                         )
                         .entrySet()
                         .stream()
-                        .filter(entry -> entry.getValue() == 1) // Frequency = 1
+                        .filter(entry -> entry.getValue() == 1) // Frequency = 1 (Integer unboxed)
                         .map(Map.Entry::getKey)
                         .findFirst();                           // First non-repeated character
         if (result.isPresent()) {

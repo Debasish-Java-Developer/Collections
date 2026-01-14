@@ -1,8 +1,8 @@
 package com.Employee.codePractice;
 
-public class Main {
+public class FindFibonacci {
     public static void main(String[] args) {
-        int n = 10;        // Number of terms
+        int n = 3;        // Number of terms
         int first = 0;     // First number
         int second = 1;    // Second number
         System.out.print(first + " " + second + " ");

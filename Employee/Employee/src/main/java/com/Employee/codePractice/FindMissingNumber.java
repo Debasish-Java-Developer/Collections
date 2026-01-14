@@ -1,6 +1,6 @@
 package com.Employee.codePractice;
 
-public class Main {
+public class FindMissingNumber {
     public static void main(String[] args) {
         int[] arr = {1, 2, 4, 5}; // Array with missing number
         int n = 5;                // Range is 1 to n

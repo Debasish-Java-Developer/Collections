@@ -1,6 +1,6 @@
 package com.Employee.codePractice;
 
-public class Main {
+public class CheckPalindrome {
     public static void main(String[] args) {
         String str = "madam";      // Input string
         String reverse = "";       // Store reversed string

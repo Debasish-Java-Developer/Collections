@@ -1,6 +1,6 @@
 package com.Employee.codePractice;
 
-public class Main {
+public class SumOfNNaturalNumbers {
     public static void main(String[] args) {
         int n = 10;    // First N natural numbers
         int sum = 0;   // Store sum
